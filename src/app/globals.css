@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════
+   Nova Studio — Design System CSS Variables
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* Backgrounds — Dark Theme (default) */
+    --background: 240 10% 4%;          /* #07070B */
+    --surface-1: 240 10% 6%;          /* #0B0B12 */
+    --surface-2: 240 10% 9%;          /* #11111A */
+    --surface-3: 240 8% 12%;          /* #181822 */
+    --surface-4: 240 8% 15%;          /* #20202C */
+
+    /* Foreground / Text */
+    --foreground: 0 0% 98%;           /* #FAFAFA */
+    --muted: 240 6% 10%;
+    --muted-foreground: 240 5% 64%;   /* #A1A1AA */
+
+    /* Brand */
+    --primary: 239 84% 67%;           /* #6366F1 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 258 90% 66%;          /* #8B5CF6 */
+    --secondary-foreground: 0 0% 100%;
+    --accent: 189 94% 43%;            /* #06B6D4 */
+    --accent-foreground: 0 0% 100%;
+
+    /* Status */
+    --success: 160 84% 39%;           /* #10B981 */
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;            /* #F59E0B */
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;         /* #EF4444 */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Card / Popover */
+    --card: 240 10% 6%;               /* #0B0B12 */
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 9%;            /* #11111A */
+    --popover-foreground: 0 0% 98%;
+
+    /* Borders / Inputs */
+    --border: 0 0% 100%;              /* used with alpha */
+    --input: 0 0% 100%;
+    --ring: 239 84% 67%;              /* primary */
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-3xl: 32px;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --surface-1: 0 0% 98%;
+    --surface-2: 0 0% 96%;
+    --surface-3: 0 0% 94%;
+    --surface-4: 0 0% 92%;
+    --foreground: 240 10% 4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 4% 46%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border) / 0.06);
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* Glass effects */
+  .glass {
+    background: hsl(0 0% 100% / 0.03);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid hsl(0 0% 100% / 0.06);
+  }
+  .glass-hover {
+    background: hsl(0 0% 100% / 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid hsl(0 0% 100% / 0.10);
+  }
+  .glass-nav {
+    background: hsl(var(--background) / 0.70);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  /* Dot grid background */
+  .dot-grid {
+    background-image: radial-gradient(hsl(0 0% 100% / 0.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(258 90% 80%), hsl(239 84% 73%), hsl(189 94% 71%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Noise overlay */
+  .noise {
+    position: relative;
+  }
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.015;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0 0% 100% / 0.08);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(0 0% 100% / 0.15);
+  }
+}
