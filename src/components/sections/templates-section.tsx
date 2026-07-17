@@ -70,7 +70,7 @@ export function TemplatesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, ease, delay: i * 0.06 }}
-                className="group glass rounded-2xl p-5 shadow-glass transition-all duration-200 hover:-translate-y-1 hover:border-white/12 hover:shadow-glow"
+                className="group glass rounded-2xl p-5 shadow-glass transition-all duration-200 hover:-translate-y-1 hover:border-border/12 hover:shadow-glow"
               >
                 <div className="flex items-start justify-between">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-brand-soft">

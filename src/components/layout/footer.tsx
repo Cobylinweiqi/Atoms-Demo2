@@ -16,7 +16,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/6 py-16">
+    <footer className="relative border-t border-border/6 py-16">
       <Container>
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           {/* Brand */}
@@ -38,7 +38,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
                 >
                   <Icon size={18} />
                 </a>
@@ -71,7 +71,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/6 pt-8 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/6 pt-8 sm:flex-row">
           <p className="text-sm text-muted-foreground">
             © 2025 Nova Studio. All rights reserved.
           </p>

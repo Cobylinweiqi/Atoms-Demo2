@@ -1,0 +1,26 @@
+package com.novastudio.backend.project.application.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class ProjectDTO {
+    private Long id;
+    private Long workspaceId;
+    private String name;
+    private String slug;
+    private String description;
+    private String type;
+    private String framework;
+    private String status;
+    private Long createdBy;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+}

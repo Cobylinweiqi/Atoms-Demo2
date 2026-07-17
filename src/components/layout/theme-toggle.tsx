@@ -10,7 +10,7 @@ export function ThemeToggle() {
   const mounted = useMounted();
 
   if (!mounted) {
-    return <div className="h-10 w-10 rounded-lg bg-white/5" />;
+    return <div className="h-10 w-10 rounded-lg bg-foreground/5" />;
   }
 
   return (
@@ -19,7 +19,7 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
       className={cn(
         "relative flex h-10 w-10 items-center justify-center rounded-lg",
-        "text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+        "text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
       )}
     >
       {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}

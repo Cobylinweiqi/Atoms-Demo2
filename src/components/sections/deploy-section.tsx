@@ -44,7 +44,7 @@ export function DeploySection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease }}
-                className="mt-6 flex items-center gap-3 rounded-xl border border-white/6 bg-white/4 p-4"
+                className="mt-6 flex items-center gap-3 rounded-xl border border-border/6 bg-foreground/4 p-4"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-success/15">
                   <Rocket size={18} className="text-success" />
@@ -69,7 +69,7 @@ export function DeploySection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, ease, delay: i * 0.08 }}
-                  className="rounded-xl border border-white/6 bg-white/4 p-4"
+                  className="rounded-xl border border-border/6 bg-foreground/4 p-4"
                 >
                   <item.icon size={20} className="text-primary" />
                   <p className="mt-3 text-sm font-semibold text-foreground">

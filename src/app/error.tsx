@@ -29,7 +29,7 @@ export default function Error({
           An unexpected error occurred. Please try again.
         </p>
         {error.digest && (
-          <code className="mt-4 rounded-lg border border-white/6 bg-white/4 px-3 py-1.5 font-mono text-xs text-muted-foreground">
+          <code className="mt-4 rounded-lg border border-border/6 bg-foreground/4 px-3 py-1.5 font-mono text-xs text-muted-foreground">
             Error ID: {error.digest}
           </code>
         )}

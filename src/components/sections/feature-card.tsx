@@ -19,7 +19,7 @@ export function FeatureCard({ feature, index }: FeatureCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease, delay: index * 0.08 }}
-      className="group relative glass rounded-2xl p-6 shadow-glass transition-all duration-200 hover:-translate-y-1 hover:border-white/12"
+      className="group relative glass rounded-2xl p-6 shadow-glass transition-all duration-200 hover:-translate-y-1 hover:border-border/12"
     >
       {/* Glow on hover */}
       <div

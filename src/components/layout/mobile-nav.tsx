@@ -17,7 +17,7 @@ export function MobileNav() {
       <button
         onClick={() => setOpen(true)}
         aria-label="Open menu"
-        className="flex h-10 w-10 items-center justify-center rounded-lg text-muted-foreground hover:bg-white/5 md:hidden"
+        className="flex h-10 w-10 items-center justify-center rounded-lg text-muted-foreground hover:bg-foreground/5 md:hidden"
       >
         <Menu size={20} />
       </button>
@@ -31,7 +31,7 @@ export function MobileNav() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={() => setOpen(false)}
-              className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-50 bg-background/60 backdrop-blur-sm md:hidden"
             />
             <motion.div
               initial={{ x: "100%" }}
@@ -46,7 +46,7 @@ export function MobileNav() {
                   <button
                     onClick={() => setOpen(false)}
                     aria-label="Close menu"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg text-muted-foreground hover:bg-white/5"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg text-muted-foreground hover:bg-foreground/5"
                   >
                     <X size={20} />
                   </button>
@@ -59,7 +59,7 @@ export function MobileNav() {
                       onClick={() => setOpen(false)}
                       className={cn(
                         "rounded-lg px-4 py-3 text-sm font-medium text-muted-foreground",
-                        "transition-colors hover:bg-white/5 hover:text-foreground"
+                        "transition-colors hover:bg-foreground/5 hover:text-foreground"
                       )}
                     >
                       {item.label}

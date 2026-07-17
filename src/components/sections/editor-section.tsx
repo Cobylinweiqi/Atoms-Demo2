@@ -71,8 +71,8 @@ export function EditorSection() {
             <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-brand-soft blur-2xl" />
             <div className="glass overflow-hidden rounded-2xl shadow-glass">
               {/* Tab bar */}
-              <div className="flex items-center gap-1 border-b border-white/6 px-4 py-2.5">
-                <div className="flex items-center gap-1.5 rounded-lg bg-white/8 px-3 py-1 text-xs font-medium text-foreground">
+              <div className="flex items-center gap-1 border-b border-border/6 px-4 py-2.5">
+                <div className="flex items-center gap-1.5 rounded-lg bg-foreground/8 px-3 py-1 text-xs font-medium text-foreground">
                   <Code2 size={12} /> Code
                 </div>
                 <div className="flex items-center gap-1.5 rounded-lg px-3 py-1 text-xs font-medium text-muted-foreground">
@@ -83,7 +83,7 @@ export function EditorSection() {
               {/* Split view */}
               <div className="grid grid-cols-2">
                 {/* Code side */}
-                <div className="border-r border-white/6 p-4">
+                <div className="border-r border-border/6 p-4">
                   <pre className="font-mono text-[10px] leading-relaxed text-muted-foreground">
                     <code>{`<Button
   variant="primary"

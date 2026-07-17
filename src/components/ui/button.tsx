@@ -12,10 +12,10 @@ const buttonVariants = cva(
         primary:
           "bg-gradient-brand text-white shadow-glow hover:shadow-glow-lg hover:-translate-y-0.5 active:translate-y-0",
         secondary:
-          "glass text-foreground hover:bg-white/8 hover:border-white/12",
-        ghost: "text-muted-foreground hover:bg-white/4 hover:text-foreground",
+          "glass text-foreground hover:bg-foreground/8 hover:border-border/12",
+        ghost: "text-muted-foreground hover:bg-foreground/4 hover:text-foreground",
         outline:
-          "border border-border/12 text-foreground hover:bg-white/4 hover:border-border/20",
+          "border border-border/12 text-foreground hover:bg-foreground/4 hover:border-border/20",
       },
       size: {
         sm: "h-9 px-4 text-sm",

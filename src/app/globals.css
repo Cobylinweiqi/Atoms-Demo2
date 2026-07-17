@@ -4,56 +4,159 @@
 
 /* ═══════════════════════════════════════════════════════════════
    Nova Studio — Design System CSS Variables
+   全部由 Design Token 驱动, 禁止硬编码颜色值
+   Dark 主题变量定义在 :root, Light 主题变量定义在 .light
    ═══════════════════════════════════════════════════════════════ */
 
 @layer base {
   :root {
-    /* Backgrounds — Dark Theme (default) */
-    --background: 240 10% 4%;          /* #07070B */
-    --surface-1: 240 10% 6%;          /* #0B0B12 */
-    --surface-2: 240 10% 9%;          /* #11111A */
-    --surface-3: 240 8% 12%;          /* #181822 */
-    --surface-4: 240 8% 15%;          /* #20202C */
+    /* ═══ Colors — Dark Theme (default) ═══ */
+    --background: 240 10% 4%;
+    --surface-1: 240 10% 6%;
+    --surface-2: 240 10% 9%;
+    --surface-3: 240 8% 12%;
+    --surface-4: 240 8% 15%;
 
-    /* Foreground / Text */
-    --foreground: 0 0% 98%;           /* #FAFAFA */
+    --foreground: 0 0% 98%;
     --muted: 240 6% 10%;
-    --muted-foreground: 240 5% 64%;   /* #A1A1AA */
+    --muted-foreground: 240 5% 64%;
 
-    /* Brand */
-    --primary: 239 84% 67%;           /* #6366F1 */
+    --primary: 239 84% 67%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 258 90% 66%;          /* #8B5CF6 */
+    --secondary: 258 90% 66%;
     --secondary-foreground: 0 0% 100%;
-    --accent: 189 94% 43%;            /* #06B6D4 */
+    --accent: 189 94% 43%;
     --accent-foreground: 0 0% 100%;
 
-    /* Status */
-    --success: 160 84% 39%;           /* #10B981 */
+    --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
-    --warning: 38 92% 50%;            /* #F59E0B */
+    --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;         /* #EF4444 */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Card / Popover */
-    --card: 240 10% 6%;               /* #0B0B12 */
+    --card: 240 10% 6%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 9%;            /* #11111A */
+    --popover: 240 10% 9%;
     --popover-foreground: 0 0% 98%;
 
-    /* Borders / Inputs */
-    --border: 0 0% 100%;              /* used with alpha */
+    --border: 0 0% 100%;
     --input: 0 0% 100%;
-    --ring: 239 84% 67%;              /* primary */
+    --ring: 239 84% 67%;
 
-    /* Radius */
+    /* ═══ Typography ═══ */
+    --font-sans: var(--font-inter), system-ui, sans-serif;
+    --font-display: var(--font-satoshi), var(--font-inter), sans-serif;
+    --font-mono: var(--font-jetbrains), monospace;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+
+    --font-weight-thin: 100;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+
+    /* ═══ Spacing ═══ */
+    --space-0: 0px;
+    --space-px: 1px;
+    --space-0\.5: 0.125rem;
+    --space-1: 0.25rem;
+    --space-1\.5: 0.375rem;
+    --space-2: 0.5rem;
+    --space-2\.5: 0.625rem;
+    --space-3: 0.75rem;
+    --space-3\.5: 0.875rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-7: 1.75rem;
+    --space-8: 2rem;
+    --space-9: 2.25rem;
+    --space-10: 2.5rem;
+    --space-11: 2.75rem;
+    --space-12: 3rem;
+    --space-14: 3.5rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+    --space-28: 7rem;
+    --space-32: 8rem;
+    --space-36: 9rem;
+    --space-40: 10rem;
+    --space-44: 11rem;
+    --space-48: 12rem;
+    --space-52: 13rem;
+    --space-56: 14rem;
+    --space-60: 15rem;
+    --space-64: 16rem;
+    --space-72: 18rem;
+    --space-80: 20rem;
+    --space-96: 24rem;
+
+    /* ═══ Radius ═══ */
+    --radius-none: 0px;
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
     --radius-xl: 20px;
     --radius-2xl: 24px;
     --radius-3xl: 32px;
+    --radius-full: 9999px;
+
+    /* ═══ Shadow ═══ */
+    --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.20);
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.20);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.24);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.28);
+    --shadow-xl: 0 16px 48px hsl(0 0% 0% / 0.32);
+    --shadow-2xl: 0 24px 64px hsl(0 0% 0% / 0.36);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.24), inset 0 1px 0 hsl(0 0% 100% / 0.06);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.30);
+    --shadow-glow-lg: 0 0 80px hsl(var(--primary) / 0.20);
+
+    /* ═══ Motion ═══ */
+    --duration-instant: 0ms;
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+    --duration-slower: 800ms;
+
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* ═══ Gradient ═══ */
+    --gradient-brand: linear-gradient(135deg, hsl(258 90% 66%), hsl(239 84% 67%), hsl(189 94% 43%));
+    --gradient-brand-soft: linear-gradient(135deg, hsl(258 90% 66% / 0.15), hsl(239 84% 67% / 0.10), hsl(189 94% 43% / 0.05));
+    --gradient-text: linear-gradient(135deg, hsl(258 90% 80%), hsl(239 84% 73%), hsl(189 94% 71%));
   }
 
   .light {
@@ -71,8 +174,25 @@
     --popover-foreground: 240 10% 4%;
     --border: 240 6% 90%;
     --input: 240 6% 90%;
+
+    --shadow-xs: 0 1px 2px hsl(240 10% 0% / 0.05);
+    --shadow-sm: 0 2px 8px hsl(240 10% 0% / 0.08);
+    --shadow-md: 0 4px 16px hsl(240 10% 0% / 0.10);
+    --shadow-lg: 0 8px 32px hsl(240 10% 0% / 0.12);
+    --shadow-xl: 0 16px 48px hsl(240 10% 0% / 0.14);
+    --shadow-2xl: 0 24px 64px hsl(240 10% 0% / 0.16);
+    --shadow-glass: 0 8px 32px hsl(240 10% 0% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.50);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.20);
+    --shadow-glow-lg: 0 0 80px hsl(var(--primary) / 0.12);
+
+    --gradient-brand-soft: linear-gradient(135deg, hsl(258 90% 66% / 0.10), hsl(239 84% 67% / 0.08), hsl(189 94% 43% / 0.05));
+    --gradient-text: linear-gradient(135deg, hsl(258 90% 55%), hsl(239 84% 55%), hsl(189 94% 40%));
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   Base Styles
+   ═══════════════════════════════════════════════════════════════ */
 
 @layer base {
   * {
@@ -81,25 +201,30 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+    font-family: var(--font-sans);
     font-feature-settings: "cv11", "ss01";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   Utility Classes — 全部引用 CSS 变量, 无硬编码
+   ═══════════════════════════════════════════════════════════════ */
+
 @layer utilities {
   /* Glass effects */
   .glass {
-    background: hsl(0 0% 100% / 0.03);
+    background: hsl(var(--foreground) / 0.03);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid hsl(0 0% 100% / 0.06);
+    border: 1px solid hsl(var(--border) / 0.06);
   }
   .glass-hover {
-    background: hsl(0 0% 100% / 0.05);
+    background: hsl(var(--foreground) / 0.05);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid hsl(0 0% 100% / 0.10);
+    border: 1px solid hsl(var(--border) / 0.10);
   }
   .glass-nav {
     background: hsl(var(--background) / 0.70);
@@ -109,13 +234,13 @@
 
   /* Dot grid background */
   .dot-grid {
-    background-image: radial-gradient(hsl(0 0% 100% / 0.025) 1px, transparent 1px);
+    background-image: radial-gradient(hsl(var(--foreground) / 0.025) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 
   /* Gradient text */
   .text-gradient {
-    background: linear-gradient(135deg, hsl(258 90% 80%), hsl(239 84% 73%), hsl(189 94% 71%));
+    background: var(--gradient-text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -144,10 +269,10 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(0 0% 100% / 0.08);
-    border-radius: 9999px;
+    background: hsl(var(--foreground) / 0.08);
+    border-radius: var(--radius-full);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(0 0% 100% / 0.15);
+    background: hsl(var(--foreground) / 0.15);
   }
 }

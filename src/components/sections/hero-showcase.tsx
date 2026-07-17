@@ -46,7 +46,7 @@ export function HeroShowcase() {
       {/* Card */}
       <div className="glass overflow-hidden rounded-2xl shadow-glass">
         {/* Toolbar */}
-        <div className="flex items-center gap-1 border-b border-white/6 px-4 py-3">
+        <div className="flex items-center gap-1 border-b border-border/6 px-4 py-3">
           <div className="flex gap-1.5">
             <span className="h-3 w-3 rounded-full bg-red-500/60" />
             <span className="h-3 w-3 rounded-full bg-yellow-500/60" />
@@ -59,7 +59,7 @@ export function HeroShowcase() {
                 className={cn(
                   "flex items-center gap-1.5 rounded-lg px-3 py-1 text-xs font-medium transition-colors",
                   active
-                    ? "bg-white/8 text-foreground"
+                    ? "bg-foreground/8 text-foreground"
                     : "text-muted-foreground"
                 )}
               >
@@ -73,7 +73,7 @@ export function HeroShowcase() {
         {/* Chat + Files */}
         <div className="grid grid-cols-1 sm:grid-cols-2">
           {/* Chat */}
-          <div className="space-y-3 border-b border-white/6 p-4 sm:border-b-0 sm:border-r">
+          <div className="space-y-3 border-b border-border/6 p-4 sm:border-b-0 sm:border-r">
             {chatMessages.map((msg, i) => (
               <motion.div
                 key={i}
@@ -87,7 +87,7 @@ export function HeroShowcase() {
               >
                 {msg.role === "user" ? (
                   <div className="flex items-start gap-2">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/8 text-[10px] font-bold">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-foreground/8 text-[10px] font-bold">
                       U
                     </div>
                     <p className="text-sm text-muted-foreground">{msg.text}</p>

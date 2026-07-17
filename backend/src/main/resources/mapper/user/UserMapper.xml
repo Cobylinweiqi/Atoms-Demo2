@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.novastudio.backend.user.infrastructure.persistence.mapper.UserMapper">
+
+    <select id="selectByEmail" resultType="com.novastudio.backend.user.infrastructure.persistence.entity.UserDO">
+        SELECT * FROM users WHERE email = #{email} AND deleted = 0
+    </select>
+
+    <select id="selectByGithubId" resultType="com.novastudio.backend.user.infrastructure.persistence.entity.UserDO">
+        SELECT * FROM users WHERE github_id = #{githubId} AND deleted = 0
+    </select>
+
+    <select id="selectByGoogleId" resultType="com.novastudio.backend.user.infrastructure.persistence.entity.UserDO">
+        SELECT * FROM users WHERE google_id = #{googleId} AND deleted = 0
+    </select>
+
+    <update id="updateLastLoginAt">
+        UPDATE users SET last_login_at = #{lastLoginAt}, updated_at = NOW() WHERE id = #{id} AND deleted = 0
+    </update>
+
+</mapper>

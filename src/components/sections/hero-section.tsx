@@ -19,7 +19,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease }}
-            className="glass mx-auto inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm transition-colors hover:border-white/12"
+            className="glass mx-auto inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm transition-colors hover:border-border/12"
           >
             <Sparkles size={14} className="text-primary" />
             <span className="text-muted-foreground">

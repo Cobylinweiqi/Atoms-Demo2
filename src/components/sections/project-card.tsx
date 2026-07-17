@@ -23,7 +23,7 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
       transition={{ duration: 0.6, ease, delay: index * 0.08 }}
       className={cn(
         "group glass rounded-2xl p-5 shadow-glass transition-all duration-200",
-        "hover:-translate-y-1 hover:border-white/12 hover:shadow-glow",
+        "hover:-translate-y-1 hover:border-border/12 hover:shadow-glow",
         featured && "sm:col-span-2 sm:row-span-2"
       )}
     >
@@ -38,7 +38,7 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
             <p className="text-xs text-muted-foreground">{project.timeAgo}</p>
           </div>
         </div>
-        <button className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground hover:bg-white/5">
+        <button className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground hover:bg-foreground/5">
           <MoreHorizontal size={16} />
         </button>
       </div>

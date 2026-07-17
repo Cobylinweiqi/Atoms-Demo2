@@ -1,0 +1,24 @@
+package com.novastudio.backend.agent.application.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class AgentExecutionDTO {
+    private Long id;
+    private Long agentId;
+    private String status;
+    private String input;
+    private String output;
+    private String error;
+    private LocalDateTime startedAt;
+    private LocalDateTime completedAt;
+    private LocalDateTime createdAt;
+}
